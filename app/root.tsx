@@ -4,6 +4,7 @@ import {
   Links,
   LiveReload,
   Meta,
+  Outlet,
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
@@ -51,7 +52,10 @@ export default function App() {
             </ul>
           </nav>
         </div>
-
+        <div id="detail">
+          {/* https://remix.run/docs/en/main/components/outlet#outlet */}
+          <Outlet />
+        </div>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
